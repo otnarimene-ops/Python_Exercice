@@ -11,4 +11,23 @@ if __name__ == "__main__":
     n = 5
     k = 3
     print("C(5,3) =", trivial_comb(n, k))
+    # combinations.py
+
+def fact_iterative(n):
+    """Calcul du factoriel de façon itérative"""
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+def comb_iterative(n, k):
+    """Calcul des combinaisons C(n,k) en utilisant fact_iterative"""
+    return fact_iterative(n) // (fact_iterative(k) * fact_iterative(n - k))
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    n = 5
+    k = 3
+    print("C(5,3) avec factorial itératif =", comb_iterative(n, k))
+
 
