@@ -46,6 +46,18 @@ if __name__ == "__main__":
     n = 5
     k = 3
     print("C(5,3) avec factorial récursif =", comb_recursive(n, k))
+    import math
+
+def comb_math(n, k):
+    """Calcul des combinaisons C(n,k) en utilisant la fonction math.comb"""
+    return math.comb(n, k)
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    n = 5
+    k = 3
+    print("C(5,3) avec math.comb =", comb_math(n, k))
+
 
 
 
